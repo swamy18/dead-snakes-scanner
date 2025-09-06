@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dead-snakes-scanner"
+version = "0.1.0"
+description = "Find Python 2 relics in your code"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["rich>=12"]
+
+[project.scripts]
+dead-snakes-scanner = "dead_snakes_scanner:main"
+
+[tool.ruff]
+line-length = 120
+
+[tool.mypy]
+strict = true
